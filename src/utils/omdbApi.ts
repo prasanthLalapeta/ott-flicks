@@ -9,7 +9,6 @@ export interface MovieDetails {
 
 export const fetchMovieDetails = async (title: string): Promise<MovieDetails | null> => {
   // Ensure the API key is defined
-  console.log('VITE_OMDB_API_KEY:', import.meta.env.VITE_OMDB_API_KEY);
   const apiKey = import.meta.env.VITE_OMDB_API_KEY;
   if (!apiKey) {
     console.error('Error: VITE_OMDB_API_KEY is not defined.');
